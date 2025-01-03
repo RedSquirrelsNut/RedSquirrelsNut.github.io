@@ -92,15 +92,20 @@
 
     <script>
         let currentSearchBoxIndex = 0;
+        let searching = true;
         const searchBoxes = [
             document.getElementById("search1"),
             document.getElementById("search2"),
         ];
         searchBoxes[currentSearchBoxIndex].focus();
         document.addEventListener("keydown", function(event) {
-            if (event.key === "Escape") {
-                currentSearchBoxIndex = 0;
-                searchBoxes[currentSearchBoxIndex].blur();  // Deselect the search input
+            if (event.ctrlKey) {
+                searching = !searching;
+                if (!searching) {
+                    searchBoxes[currentSearchBoxIndex].blur();  // Deselect the search input
+                } else {
+                    searchBoxes[currentSearchBoxIndex].focus();
+                }
             }
             // Handle the `;` key to swap between search boxes
             if (event.key === ";") {
@@ -113,7 +118,7 @@
                 const pressedKey = event.key.toLowerCase();
 
                 // Find the link with the matching data-key attribute
-                const link = document.querySelector("a[data-key="${pressedKey}"]");
+                const link = document.querySelector(`a[data-key="${pressedKey}"]`);
             
                 // If a matching link is found, navigate to its href
                 if (link) {
