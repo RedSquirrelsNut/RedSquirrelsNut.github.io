@@ -27,6 +27,22 @@
             margin-bottom: 20px;
         }
 
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px; /* This will create space below the header */
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            /* padding-bottom: 50px; */
+            /* margin-bottom: 200px; */
+            /* border-radius: 50%; */
+        }
+
         .search-container {
             display: flex;
             flex-direction: column;
@@ -89,7 +105,9 @@
 </head>
 
 <body>
-    <h1>Welcome</h1>
+    <div class="logo-container">
+        <img src="nix.png" class="header-image" alt="Header Image">
+    </div>
     <div class="search-container">
         <form action="https://duckduckgo.com/" method="get">
             <input type="text" id="search1" name="q" placeholder="Search DuckDuckGo">
@@ -100,7 +118,7 @@
             <input type="hidden" name="channel" value="unstable">
             <button type="submit">Search</button>
         </form>
-        <form action="https://nixos.wiki/index.php" method="get">
+        <form action="https://wiki.nixos.org/w/index.php" method="get">
             <input type="text" id="search3" name="search" placeholder="Search Nix Wiki">
             <input type="hidden" name="title" value="Special:Search">
             <button type="submit">Search</button>
@@ -112,7 +130,7 @@
     </div>
     <div class="links">
         <a href="https://search.nixos.org/packages">Nix Packages</a>
-        <a href="https://nixos.wiki/">Nix Wiki</a>
+        <a href="https://wiki.nixos.org/">Nix Wiki</a>
         <a href="https://noogle.dev/">Noogle</a>
         <a href="https://github.com">GitHub</a>
         <a href="https://chat.deepseek.com">DeepSeek</a>
