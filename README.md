@@ -1,3 +1,5 @@
-# Nix themed homepage
+# Firefox Homepage
 
-Includes search for Duckduckgo, Nixpkgs, Nix Wiki, and Noogle. There are also a few buttons for commonly used links that are accessable via keyboard shortcuts. Catppuccin macchiato theme.
+* Search bars for Duckduckgo, Nixpkgs, Nix Wiki, and Noogle
+* Buttons for commonly used links
+* Catppuccin macchiato theme
